@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     li {
+       margin-bottom: 10px;
+     }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>1) - how to add comments on css?</div>
+        <div>Answer - By using /* */</div>
+      </li>
+      <li>
+        <div>2) - Why do we use pseudo-class</div>
+        <div>
+          Answer - We use  Pseudo-class to  add an effect to existing elements based on their states. Example are hover,
+          after,active, visited
+        </div>
+      </li>
+      <li>
+        <div>3) - How is specificity applied?</div>
+        <div>
+          Answer - the selector with the highest specificity value will be applied to  that HTML element.
+          Inline styleing has more priority than id which has more priority than class.
+        </div>
+      </li>
+      <li>
+        <div>
+          4) - What method allows an element to be moved from its current
+          position?
+        </div>
+        <div>Answer - translate</div>
+      </li>
+      <li>
+        <div>5) -what properties does flex model have</div>
+        <div>Answer - Flex - direction , flex-wrap, flex-grow, flex-shrink , flex-flow </div>
+      </li>
+      <li>
+        <div>6) -What is the difference between flex and grids?</div>
+        <div>
+          Answer - The basic difference between  Grid Flexbox  is that flexbox was designed for layout
+          in one dimension - either a row or a column. Grid was designed for
+          two-dimensional layout - rows, and columns at the same time.
+        </div>
+      </li>
+      <li>
+        <div>
+          7) - Give an example where we have to use grids and where you have to
+          use flexbox
+        </div>
+        <div>Answer - Flex - On Navbar  </div>
+        <div>Grid - where the content are divided in layout wise  </div>
+      </li>
+      <li>
+        <div>8)Give an example where you cannot use flexbox, and you can only use grids?</div>
+        <div>Answer - If we want to make multi-dimensional layout which is reponsive</div>
+      </li>
+      <li>
+        <div>
+          9)- What are combinators? give examples of how you can use them
+        </div>
+        <div>
+          <div>
+            Answer - A combinator is something that explains the relationship
+            between the selectors.
+            <div>Descendant selector - all child gets Selected</div>
+            <div>Child Selector - For selecting Direct child</div>
+            <div>
+              adjacent sibling selector - For selecting only 1 adjacent
+              elememnts
+            </div>
+            <div>
+              General Sibling Selector - For selecting all next siblings of a
+              specified element.
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div>10) - What does object-fit do</div>
+        <div>Answer - sets how the content of a replaced element, such as an img or video, should be resized to fit its container</div>
+      </li>
+      <li>
+        <div>11) - What does rotate do</div>
+        <div>
+          Answer - rotates an element around a fixed point on the 2D plane,with
+          given degree
+        </div>
+      </li>
+      <li>
+        <div>12) - What rule can be used to define animations</div>
+        <div>Answer - We must bind the animation to an element. eg - animation-name: spinner; and in keyFrames we should write
+           @keyframes spinner {
+          from { 
+           transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+        }
+      </div>
+      </li>
+      <li>
+        <div>
+          13) - When working with attribute selectors, how can you select
+          elements which contain a particular attribute value?
+        </div>
+        <div>Answer - [attribute*="value"] Example - input[type=number] {some css property}</div>
+      </li>
+      <li>
+        <div>14) - What does @media do?</div>
+        <div>
+          Answer - The @media rule is used in media queries to apply different
+          styles for different media types/devices.
+        </div>
+      </li>
+      <li>
+        <div>15) - What can be used to override properties of an element</div>
+        <div>we can use the !important directive. In CSS, !important means “this is important”, and the property:value pair that has this directive is always applied even if the other element has higher specificity.</div>
+      </li>
+      <li>
+          <div>16) - How can you select every alternate elements in a list of elements using css</div>
+          <div>For choosing we can use h2:nth-child(2n){color:red}</div>
+          <div>For choosing we can use h2:nth-child(2n + 1){color:green}</div>
+      </li>
+      <li>
+          <div>17) - What is the ranking of selectors with respect to specificity</div>
+          <div>Answer - !important , inline-styles, #id, class</div>
+      </li>
+    
+      <li>
+          <div>18) - how can we apply same styles to multiple selectors?</div>
+          <div>Answer -  By using is:() or by using comma</div>
+      </li>
+      <li>
+          <div>19) - What are the differences between relative and absolute in CSS?</div>
+          <div>
+              relative - Position an element based on its current position without changing layout.
+              absolute - Position an element based on its closest positioned of relative position
+          </div>
+      </li>
+    </ul>
+  </body>
+</html>
