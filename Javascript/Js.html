@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        margin-bottom: 20px;
+        border: 1px solid red;
+        padding: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>1) Hoisting</div>
+        <div>
+          Answer - refers to the process whereby the interpreter / compiler
+          appears to move the declaration of functions, variables or classes to
+          the top of their scope, prior to execution of the code.
+        </div>
+      </li>
+      <li>
+        <div>2) Scoping</div>
+        <div>Answer - cope in JavaScript refers to the current context of code, which determines the accessibility of variables to JavaScript. The two types of scope are local and global:
+            <br/>
+            Global variables are those declared outside of a block
+            <br/>
+            Local variables are those declared inside of a block</div>
+      </li>
+      <li>
+        <div>3) How are var, let const different?</div>
+        <div>
+          <table border="3">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Var</th>
+                <th>Let</th>
+                <th>Const</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Scope</th>
+                <td>Local or Global</td>
+                <td>Local</td>
+                <td>Local</td>
+              </tr>
+              <tr>
+                <th>Hoisted and access</th>
+                <td>Hoisted and access before assigning a value</td>
+                <td>Hoisted and can't be access before assigning a value</td>
+                <td>Hoisted and can't be access before assigning a value</td>
+              </tr>
+              <tr>
+                <th>Redeclare</th>
+                <td>Can be redeclared eg - var a=100; var a=10;</td>
+                <td>Can't be redeclared</td>
+                <td>Can't be redeclared</td>
+              </tr>
+              <tr>
+                <th>Reassign</th>
+                <td>Can be Reassign eg - var a = 20; a = "str";</td>
+                <td>Can be Reassign eg - let a = 20; a = "str";</td>
+                <td>Can't be Reassign</td>
+              </tr>
+              <tr>
+                <th>Initial value</th>
+                <td>Not mandatory</td>
+                <td>Not mandatory</td>
+                <td>mandatory</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </li>
+      <li>
+        <div>4) - What are the two main differences in arrow functions?</div>
+        <div>
+          Normal Function <br />
+          1) The execution context depends on how the function is invoked <br />
+          2) These are hoisted <br />
+          3) we can construct new object using <strong>new </strong> keyboard
+        </div>
+        <div>
+          Arrow functions <br />
+          1) It doesn't define its execution context so this value inside of an
+          arrow function always equals this value from the outer function <br />
+          2) These are not hoisted <br />
+          3) A consequence of this resolved lexically is that an arrow function
+          cannot be used as a constructor. so javascript throws erro
+        </div>
+      </li>
+      <li>
+        <div>5) - Does Call apply bind work for arrow functions?</div>
+        <div>No because arrow functions do not have their own this,</div>
+      </li>
+      <li>
+        <div>6) What does call apply bind do</div>
+        <div>
+          when we want a function to later be called with a certain context
+        </div>
+      </li>
+      <li>
+        <div>7)What are closures?</div>
+        <div>
+          It is a combination of a function bundled together (enclosed) with
+          references to its surrounding state (the lexical environment). In
+          other words we can say that local variables of outer fn can be
+          accessed in inner fn
+        </div>
+      </li>
+      <li>
+        <div>8)- What is event bubbling?</div>
+        <div>
+          Answer - Event bubbling is a type of event propagation[1] where the
+          event first triggers on the innermost target element, and then
+          successively triggers on the ancestors (parents) of the target element
+          in the same nesting hierarchy till it reaches the outermost DOM
+          element or document object
+        </div>
+      </li>
+      <li>
+        <div>9)- What is event loop</div>
+        <div>
+          Answer - An event loop is something that pulls stuff out of the queue
+          and places it onto the function execution stack whenever the function
+          stack becomes empty.
+        </div>
+      </li>
+      <li>
+        <div>10)- Explain promises to a 5 year old, with simple examples</div>
+        <div>
+          Answer - Suppose your birthday is coming and your parents has promised
+          to give you bicycle. On the birthday date his promise will be either
+          fulflilled or rejected. If he gets bicycle then promise is fulfilled,
+          if not it was rejected and there was some error. There is also finally
+          which is regardless of fulfilled or rejected, you will get to cut the
+          cake which is finally
+        </div>
+      </li>
+      <li>
+        <div>11)- what does async await mean?</div>
+        <div>
+          Answer - These are the keywords to write cleaner cleaner code instead
+          of use .then and .catch. We declare async with a function and await is
+          written in promise calls. We usually write it in try catch block
+        </div>
+      </li>
+      <li>
+        <div>12)- What does the this keyword mean?</div>
+        <div>
+          Answer - This” keyword refers to an object that is executing the
+          current piece of code. It references the object that is executing the
+          current function. If the function being referenced is a regular
+          function, “this” references the global object
+        </div>
+      </li>
+      <li>
+        <div>13)- What are classes? what are getters and setters?</div>
+        <div>
+          Answer - class is a blueprint for creating objects. JavaScript classes
+          are syntactic sugar over the prototypal inheritance. In other words,
+          ES6 classes are just special functions. Getters - We can get the
+          propert of object using getter . Setter - by using set we can set
+          propert of object
+        </div>
+      </li>
+      <li>
+        <div>
+          14)- How do you declare private and static variables in classes
+        </div>
+        <div>
+          Answer - Private instance fields are declared with # names, which are
+          identifiers prefixed with #. Static - they are prepended by static
+          keyword
+        </div>
+      </li>
+      <li>
+        <div>15)- What is currying?</div>
+        <div>
+          Answe - Currying is a technique of evaluating function with multiple
+          arguments, into sequence of functions with single argument.In other
+          words, when a function, instead of taking all arguments at one time,
+          takes the first one and return a new function that takes the second
+          one and returns a new function which takes the third one, and so
+          forth, until all arguments have been fulfilled.
+        </div>
+      </li>
+    </ul>
+    <script></script>
+  </body>
+</html>
