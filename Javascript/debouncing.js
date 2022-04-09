@@ -8,3 +8,12 @@ const debouncer = (fn, delay) => {
       id = setTimeout(() => fn(), delay);
     };
   };
+
+  // var  timerId;
+  // var  debounceFunction  =  function (func, delay) {
+  //   // Cancels the setTimeout method execution
+  //   clearTimeout(timerId)
+  
+  //   // Executes the func after delay time.
+  //   timerId  =  setTimeout(func, delay)
+  // }
