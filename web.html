@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        margin-bottom: 20px;
+        border: 1px solid red;
+        padding: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>Question - <strong>Explain briefly what happens when you hit a url? explain DNS lookup</strong></div>
+        <div>Answer - <strong><br />a) DNS lookup - 
+            When we hit a url, the first thing that needs to happen is to resolve IP address associated with the domain name.
+            DNS(Domain name system) helps in resolving this.
+            DNS is like a phone book and helps us to provide the IP address that is associated with the domain name, just like our phone book gives a mobile number which is associated with the person's name.
+            
+            <br />b) TCP Connection - 
+            Once the IP address of the computer where the website info is there is found, a connection with it is initiated.
+            To communicate over the network, internet protocol is followed. TCP/IP is the most common protocol.
+            The connection is built using a process called 'TCP 3-way handshake'.
+               1. A client computer sends a SYN (short for synchronize) message, indicating that the client wants to establish a connection.
+               2. Server, if open for a new connection,responds to the client request with SYN message and Acknowledge message (ACK).
+               3. The client, receives the message and acknowledges by sending an ACK message.
+        
+            <br /> c) Communication - 
+              After successful connection, the client/browser sends a request to the server that I want so and so. 
+              The server knows what respond to send for every request, and the server responds back.
+        
+        
+            This is what happens when we hit a URL.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is a URLs full form? Explain what a url is and the four parts it consists of The protocol in use The hostname of the server The location of the file The arguments to the file</strong></div>
+        <div>Answer - <strong>URL stands for Uniform Resource Locator
+            <br /> It is a unique identifier used to locate a resource on the Interent.
+            <br />  It is also referred to as a web address.
+        
+            <br />  A URL is normally made up of four parts
+            <br />   1. A scheme - The scheme identifies the protocol to be used to access the resource on the Internet. It can be HTTP (without SSL) or HTTPS (with SSL) for the websites. 
+            <br />  One example for other scheme is mailto: (to open a mail client)
+            <br />   2. A hostname - www.example.com
+            <br />   3. A path - he path identifies the specific resource in the host that the web client wants to access.   For example, /path/to/myfile.html 
+            <br />  4. Parameters - The parameters are a list of key/value pairs separated with the & symbol. The web server can use those parameters to do extra stuff before returning the resource.
+            <br />   For example, ?key1=value1&key2=value2
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is HTTP protocol?</strong></div>
+        <div>
+          Answer -
+          <strong
+            >HTTP (Hypertext Transfer Protocol) is a protocol designed to
+            transfer information between networked devices and runs on top of
+            other layers of the network protocol stack. A typical flow over HTTP
+            involves a client machine making a request to a server, which then
+            sends a response message.
+          </strong>
+        </div>
+      </li>
+      <li>
+        <div>Question - <strong>What is TCP Protocol? </strong></div>
+        <div>
+          Answer -
+          <strong
+            >TCP (Transmission Control Protocol) is a protocol that facilitates
+            the transmission of packets from source to destination. TCP lets two
+            hosts connect and exchange data streams. Data travels over the
+            Internet in packets. TCP guarantees the delivery of data and packets
+            in the same order as they were sent.
+          </strong>
+        </div>
+      </li>
+      <li>
+        <div>Question - <strong>Explain all the different HTTP methods?</strong></div>
+        <div>Answer - <strong>The primary or most commonly-used HTTP methods are POST, GET, PUT, PATCH, and DELETE.
+            These methods correspond to create, read, update, and delete (or CRUD) operations, respectively. There are a number of other methods, too, but they are utilized less frequently.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What are HTTP headers?
+        </strong></div>
+        <div>Answer - <strong>HTTP headers let the client and the server pass additional information with an HTTP request or response.
+            An HTTP header consists of its case-insensitive name followed by a colon (:), then by its value.
+            For example :
+            Authorization : Bearer <token>
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What are some HTTP response codes? what does it mean? 2xx, 3xx, 4xx, 5xx</strong></div>
+        <div>Answer - <strong>HTTP response status codes indicate whether a specific HTTP request has been successfully completed.
+            Responses are grouped in five classes :
+                1. Informational responses (100-199)
+                2. Successful responses (200-299)
+                3. Redirection messages (300-399)
+                4. Client error responses (400-499)
+                5. Server error responses (500-599)
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What does cache control on http response mean?</strong></div>
+        <div>Answer - <strong>The Cache-Control HTTP header field holds instructions/directives that control caching in browsers and shared caches (e.g. Proxies, CDNs).
+            
+            For example : 
+            max-age
+            The max-age=N response directive indicates that the response remains "fresh" until N seconds after the response is generated.
+            Cache-Control: max-age=604800
+            
+            Indicates that caches can store this response and reuse it for subsequent requests while it's "fresh".
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is polling?</strong></div>
+        <div>Answer - <strong>Polling is a technique by which a client can ask the server for new or fresh data by periodically making API requests to a server.</strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is long polling?
+        </strong></div>
+        <div>Answer - <strong>In regular polling, the client makes a request to the server periodically, for example, once very 10 seconds which is not really efficient performance-wise because even if the server is not having any new/fresh data, the server is bombarded with requests.
+            
+            So long polling offers a better way to poll the server.
+            The long polling flow is as follows : 
+                1. The client makes a request to the server
+                2. The server does not immediately respond with the requested information but waits until there's new information available.
+                3. When there's new information available, the server responds with the new information.
+                4. The client receives the new information and immediately sends another request to the server,re-starting the process.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What are web sockets?</strong></div>
+        <div>Answer - <strong>Web sockets is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser/client and a server.
+            
+            With this API, you can send messages/requests to a server and receive event-driven responses without having to poll the server for a reply.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>How is web sockets different from HTTP?
+        </strong></div>
+        <div>Answer - <strong>Unlike http, where you have to constantly make requests to the server, with websockets, responses are sent immediately when they are available.
+            
+            Web sockets keep a single, persistent connection open while eliminating latency problems that arise with HTTP request/response-based methods.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is HTTPS?
+        </strong></div>
+        <div>Answer - <strong>HTTPS (HyperText Transfer Protocol Secure) is an encrypted and secure version of the HTTP protocol.
+            It uses SSL or TLS to encrypt all communication between a client and a server.
+            This secure connection allows clients to safely exchange sensitive data with a server, such as when performing banking activities or online shopping.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is Cross Origin Resource Sharing? ( CORS ) Why do we need it?</strong></div>
+        <div>Answer - <strong>This is useful because, thanks to the same-origin policy followed by XMLHttpRequest and fetch, 
+            JavaScript can only make calls to URLs that live on the same origin as the location where the script is running. For example, if a JavaScript app wishes to make an AJAX call to an API running on a different domain, it would be blocked from doing so thanks to the same-origin policy.
+            
+            Most of the time, a script running in the user's browser would only ever need to access resources on the same origin (think about API calls to the same backend that served the JavaScript code in the first place). So the fact that JavaScript can't normally access resources on other origins is a good thing for security.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What does Access-Control-Allow-Origin header do?
+        </strong></div>
+        <div>Answer - <strong>This header specifies which origins can access the resource or whether the response can be shared with requesting code from the given origin.
+        </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is clickjacking? How do you fix it?
+        </strong></div>
+        <div>Answer - <strong>
+            Clickjacking is an attack that tricks a user into clicking a webpage element which is invisible or disguised as another element.
+            It is a type of cyber attack where an unseen malicious link is placed over a website's UI.
+        
+            Clickjacking is caused due to allowing permission to a third party website to embed the vulnerable site using Iframe. Disallowing this can be done by setting HTTP headers that direct browser to not allow the target website to be iframed. 
+            This can be done by configuring server on the following two response headers: X-Frame-Options Content-Security-Policy. 
+            It can also be done using JavaScript code that kills the iframe. So the third solutions is: JavaScript code to burst the frame.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What are some performance metrics for your website?</strong></div>
+        <div>Answer - <strong>Some of the website performance metrics are : 
+            
+            <br/> 1. Page Speed - The time it takes for a page to load.
+               <br/> 2. Time to Title - The time it takes for a website's title to appear in a browser tab.
+               <br/> 3. Time to Start Render - The time it takes from an individual making a request and the amount of time it takes for content to begin loading — even if it does not fully load — is called the time to start render.
+               <br/>  4. Time to Interact - It refers to how much time it takes before individuals can begin to click on links, type in text fields, scroll on a page, and interact in other ways with a website. 
+               <br/>  5. DNS Lookup Speed - The time it takes for your Domain Name System (DNS) provider to translate a domain name into an IP address
+               <br/>  6. Bounce Rate - Refers to users "bouncing" away from your site without thoroughly searching through it.
+               <br/>7. Throughput/Requests per Second - Number of requests your server receives every second.
+               <br/> 8. Error Rate - error rate measures the number of errors occurring at any given time, keeping track of how many occur within a specific time frame.
+               <br/> 9. Time to First Byte/Last Byte - 
+                  Time it takes for the first byte of information to reach a user’s web browser, which in this case is referred to as the time to first byte or TTFB.
+                  Likewise, time to last byte or TTLB refers to the moment when a user has received all of their information, and similarly, the quality of code plays a vital role in how quickly this occurs.
+            
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What does the following term mean?
+        </strong></div>
+        <div>Answer - <strong> <br/> 1. Time to first byte - Time to First Byte (TTFB) refers to the time between the browser requesting a page and when it receives the first byte of information from the server.
+            <br/>  2. Page load time - Page load time is the time it takes for a page to load
+         </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What do CDN or Content Delivery Networks do? When do you need a CDN?</strong></div>
+        <div>Answer - <strong>CDN (Content Delivery Network) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content.
+            CDNs cache content like web pages, images, and video in proxy servers near to your physical location. 
+            
+            CDNs are especially useful to large, complex websites with users spread across the globe, and websites or mobile apps with lots of dynamic content.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is the difference between Client Side Renderring and Server Side Renderring?
+        </strong></div>
+        <div>Answer - <strong>In Client Side Rendering, the HTML is generated on the client side by executing Javascript code in the browser. The Javascript code is executed by the browser Javascript engine.
+            
+            In Server Side Rendering, the HTML is generated by executing code on the server-side.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is Progressive Renderring</strong></div>
+        <div>Answer - <strong>Progressive rendering is the technique of sequentially rendering portions of a webpage in the server and streaming it to the client in parts without waiting for the whole page to be rendered</strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What is the difference between Preloading and Prefetching resources?
+        </strong></div>
+        <div>Answer - <strong>Preload tells the browser to download and cache a resource (like a script or a stylesheet) as soon as possible. It’s helpful when you need that resource a few seconds after loading the page, and you want to speed it up.
+            
+            Prefetch asks the browser to download and cache a resource (like, a script or a stylesheet) in the background. The download happens with a low priority, so it doesn’t interfere with more important resources. It’s helpful when you know you’ll need that resource on a subsequent page, and you want to cache it ahead of time.
+            </strong></div>
+      </li>
+      <li>
+        <div>Question - <strong>What are service workers?
+        </strong></div>
+        <div>Answer - 
+            <strong>            A service worker is a type of web worker. It's essentially a JavaScript file that runs separately from the main browser thread, intercepting network requests, caching or retrieving resources from the cache, and delivering push messages.
+            </strong></div>
+      </li>
+    </ul>
+  </body>
+</html>
