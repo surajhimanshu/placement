@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        margin-bottom: 20px;
+        border: 1px solid red;
+        padding: 1%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <div>1) Give an example where call apply bind is. required?</div>
+        <div>
+          Answer - Use .bind() when you want that function to later be called with a certain context, useful in events. Use .call() or .apply() when you want to invoke the function immediately, and modify the context.
+        </div>
+      </li>
+      <li>
+        <div>2) What is the difference between readFile and readFileSync?</div>
+        <div>Answer - In fs. readFile() method, we can read a file in a non-blocking asynchronous way, but in fs. readFileSync() method, we can read files in a synchronous way,</div>
+      </li>
+     
+      <li>
+        <div>3) - What does process in node.js mean?</div>
+        <div>
+            The process object in Node. js is a global object that can be accessed inside any module without requiring it.
+        </div>
+      </li>
+      <li>
+        <div>4) - What is the difference of JS from browser to JS on node.js</div>
+        <div>Nodejs- NodeJS is a cross-platform and opensource Javascript runtime environment that allows the javascript to be run on the server-side. Nodejs allows Javascript code to run outside the browser. Nodejs comes with a lot of modules and mostly used in web development.</div>
+        <div>JavaScript - avascript is a Scripting language. It is mostly abbreviated as JS. It can be said that Javascript is the updated version of the ECMA script. Javascript is a high-level programming language that uses the concept of Oops but it is based on prototype inheritance</div>
+      </li>
+      <li>
+        <div>5) Write three different ways to reverse a string in Javascript? a. using inbuilt method, b. iteratively, c. recursively
+
+        </div>
+        <div>
+         a- let str = "mini";
+         str = str.split("").reverse().join("");
+         console.log(str);
+         b- const reverseString = (str) => {
+            let reverse = "";
+            for (let c of str) {
+                reverse = c + reverse;
+            }
+           console.log(reverse)
+        };
+            str = reverseString("mini");
+            c -  function reverse(str) {
+                if (str === "") {
+                    return "";
+                } else {
+                    return reverse(str.substr(1)) + str.charAt(0);
+                }
+                }
+                str = reverseString("mini");
+        </div>
+      </li>
+      <li>
+        <div>6)Write a program to check two objects are equal ( deep equal )</div>
+        <div>
+            function deepEqual () {
+                const obj1 = {
+                    name: 'Ram',
+                    age: 21
+                };
+              
+                const obj2 = {
+                    name: 'Ram',
+                    age: 21
+                };
+              
+                const haveSameData = function (obj1, obj2) {
+                    const obj1Length = Object.keys(obj1).length;
+                    const obj2Length = Object.keys(obj2).length;
+              
+                    if (obj1Length === obj2Length) {
+                        return Object.keys(obj1).every(
+                            key => obj2.hasOwnProperty(key)
+                                && obj2[key] === obj1[key]);
+                    }
+                    return false;
+                }
+            }
+        </div>
+      </li>
+      <li>
+        <div>7)What is shallow equal?</div>
+        <div>
+            shallow comparison is when the properties of the objects being compared is done using "===" or strict equality and will not conduct comparisons deeper into the properties
+        </div>
+      </li>
+
+     
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+1. Explain in brief what is node js?
+Ans: Node.js is an open-source, back-end JavaScript runtime environment that runs on
+the V8 engine and executes JavaScript code outside a web browser.
+2. How is node js non-blocking?
+Ans: Non-blocking methods executes asynchronously, In Node.js event loop allows to
+perform non-blocking operations despite the fact that JavaScript is single-threaded. The
+loop, which runs on the same thread as the JavaScript code, grabs a task from the code
+and executes it.
+3. What is throughput?
+Ans: Throughput is a measure of how many units of information a system can process in
+a given amount of time.
+4. How is Node js having high IO throughput?
+Ans: Node. js is asynchronous and single-threaded. This means that all I/O
+operations don't block any other operations. Due to it Node js having high IO
+throughput.
+5. How can you end up blocking your main thread in node.js?
+Ans: By using event loop.
+6. What is process tick?
+Ans: Every time the event loop takes a full trip, we call it a tick. When we pass a
+function to process.nextTick() , we instruct the engine to invoke this function at the
+end of the current operation, before the next event loop tick starts
+7. What is event loop?
+Ans: The event loop is the secret behind JavaScript's asynchronous programming.
+JS executes all operations on a single thread, but using a few smart data structures,
+it gives us the illusion of multi-threading.
+8. What is the difference between setTimeout and setInterval?
+Ans: setTimeout() triggers the expression only once while setInterval() keeps
+triggering expression regularly after the given interval of time.
+9. How can you make a network request with http module from the backend?
+Ans:
+
+10. How can you create your own events?
+Ans: const event = new CustomEvent('build', { detail: elem.dataset.time });mEvent('build', {
+detail: elem.dataset.time })
+11. What are clusters?
+Ans: Cluster is a group of two or more computers, or nodes, that run in parallel to achieve
+a common goal.
+12. How does your Node.js application handle scale? Elaborate
+Ans: The easiest thing to do to scale a big application is to clone it multiple times and
+have each cloned instance handle part of the workload (with a load balancer, for
+example). This does not cost a lot in term of development time and it's highly
+effective. This strategy is the minimum you should do and Node.
+13. What is the difference between readFile and readFileSync?
+Ans: In readFile() method, we can read a file in a non-blocking asynchronous way, but
+in readFileSync() method, we can read files in a synchronous way.
+14. What are CORS? How do you configure them? Why do you need them?
+Ans: CORS stands for Cross-Origin Resource Sharing . It allows us to relax the
+security applied to an API.
+var express = require('express')
+var cors = require('cors')
+var app = express()
+var corsOptions = {
+origin: 'http://example.com',
+optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs)
+choke on 204
+}
+app.get('/products/:id', cors(corsOptions), function (req, res, next) {
+res.json({msg: 'This is CORS-enabled for only example.com.'})
+})
+app.listen(80, function () {
+console.log('CORS-enabled web server listening on port 80')})
+
+15. What is rate limiting?
+Ans: Rate limiting is used to control the rate of requests sent or received by a network
+interface controller.
+16. How does middlewares work in express?
+Ans: Routing refers to how an application's endpoints (URIs) respond to client
+requests. For an introduction to routing, see Basic routing. You define routing using
+methods of the Express app object that correspond to HTTP methods; for example,
+app. get() to handle GET requests and app.
+17. What is the difference between Encryption and Hashing?
+Ans: Encryption is a two-way function that includes encryption and decryption whilst
+hashing is a one-way function that changes a plain text to a unique digest that is
+irreversible.
+18. What is the difference between https and http?
+Ans: HTTPS is HTTP with encryption. Assume a user login in his facebook
+then the login data (ID, password) transported to server, so there is chances
+of hacking but in HTTPS the login credentials are encrypted in some token so
+that noone can see your original credentials.
+19. What is TLS and AES?
+Ans: TSL: Transport Layer Security is a cryptographic protocol designed to provide
+communications security over a computer network.
+AES: The Advanced Encryption Standard is a specification for the encryption of
+electronic data.
+20. What is JWT Token? Why do we need to use JWT? What are some pros and cons?
+Ans: JSON Web Token is a proposed Internet standard for creating data with optional
+signature and/or optional encryption whose payload holds JSON that asserts some
+number of claims. The tokens are signed either using a private secret or a public/private
+key.
+21. What is salting? Where do we store salt?
+Ans: Salting works by adding an extra secret value to the input, extending the length
+of the original password.
+22. What is the difference between Authorisation and Authentication?
+Ans: Authentication is the process of verifying who someone is, whereas
+authorization is the process of verifying what specific applications, files, and data a
+user has access to.
+
+23. What is difference between JS on the browser and node?
+Ans:
+Node Browser
+
+Node doesn't have a predefined
+"window" object cause it doesn't
+have a window to draw anything.
+
+"window" is a predefined global object
+which has functions and attributes, that
+have to deal with window that has been
+drawn.
+
+"location" object is related to a particular
+url; that means it is for page specific. So,
+node doesn't require that.
+
+"location" is another predefined object in
+browsers, that has all the information about
+the url we have loaded.
+
+Ofcourse Node doesn't have "document"
+object also, cause it never have to render
+anything in a page.
+
+"document", which is also another
+predefined global variable in browsers, has
+the html which is rendered.
+
+Node has "global", which is a predefined
+global object. It contains several functions
+that are not available in browsers, cause
+they are needed for server side works only.
+
+Browsers may have an object named
+"global", but it will be the exact one as
+"window".
+
+"require" object is predefined in Node which
+is used to include modules in the app.
+
+Browsers don't have "require" predefined.
+You may include it in your app for
+asynchronous file loading.
+
+In Node everything is a module. You must
+keep your code inside a module.
+
+Moduling is not mandatory in client side
+JavaScript, i.e. in browsers.
+Node is headless. Browsers are not headless.
+Node processes request object. Browsers processes response objects.
+
+24. What is V8?
+Ans: V8 is the name of the JavaScript engine that powers Google Chrome.V8
+provides the runtime environment in which JavaScript executes.
